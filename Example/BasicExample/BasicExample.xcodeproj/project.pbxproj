@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		46EDC6F627C6B8D100B870D7 /* BasicExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC6F527C6B8D100B870D7 /* BasicExampleApp.swift */; };
-		46EDC6F827C6B8D100B870D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC6F727C6B8D100B870D7 /* ContentView.swift */; };
 		46EDC6FA27C6B8D200B870D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EDC6F927C6B8D200B870D7 /* Assets.xcassets */; };
 		46EDC6FD27C6B8D200B870D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EDC6FC27C6B8D200B870D7 /* Preview Assets.xcassets */; };
 		46EDC70727C6B8D200B870D7 /* BasicExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC70627C6B8D200B870D7 /* BasicExampleTests.swift */; };
 		46EDC71127C6B8D200B870D7 /* BasicExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71027C6B8D200B870D7 /* BasicExampleUITests.swift */; };
 		46EDC71327C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */; };
 		46EDC72127C6B92C00B870D7 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 46EDC72027C6B92C00B870D7 /* Segment */; };
+		EAD02A73298CDA8400229957 /* SEGNielsenWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD02A72298CDA8400229957 /* SEGNielsenWebViewController.swift */; };
+		EAD02A75298D3DC000229957 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD02A74298D3DC000229957 /* Utility.swift */; };
+		EAD949A1298A733100625D50 /* SegmentNielsenDTVR in Frameworks */ = {isa = PBXBuildFile; productRef = EAD949A0298A733100625D50 /* SegmentNielsenDTVR */; };
+		EAD949A5298A73D900625D50 /* SEGNielsenMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD949A4298A73D900625D50 /* SEGNielsenMainViewController.swift */; };
+		EAD949A7298A9CC000625D50 /* SEGVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD949A6298A9CC000625D50 /* SEGVideoModel.swift */; };
+		EAD949A9298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD949A8298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,6 @@
 /* Begin PBXFileReference section */
 		46EDC6F227C6B8D100B870D7 /* BasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EDC6F527C6B8D100B870D7 /* BasicExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleApp.swift; sourceTree = "<group>"; };
-		46EDC6F727C6B8D100B870D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46EDC6F927C6B8D200B870D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46EDC6FC27C6B8D200B870D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		46EDC70227C6B8D200B870D7 /* BasicExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +49,12 @@
 		46EDC70C27C6B8D200B870D7 /* BasicExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EDC71027C6B8D200B870D7 /* BasicExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleUITests.swift; sourceTree = "<group>"; };
 		46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAD02A72298CDA8400229957 /* SEGNielsenWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGNielsenWebViewController.swift; sourceTree = "<group>"; };
+		EAD02A74298D3DC000229957 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EAD9499E298A72EA00625D50 /* analytics-swift-integration-nielsen-dtvr */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "analytics-swift-integration-nielsen-dtvr"; path = ../..; sourceTree = "<group>"; };
+		EAD949A4298A73D900625D50 /* SEGNielsenMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEGNielsenMainViewController.swift; sourceTree = "<group>"; };
+		EAD949A6298A9CC000625D50 /* SEGVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGVideoModel.swift; sourceTree = "<group>"; };
+		EAD949A8298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGNielsenVideoPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EDC72127C6B92C00B870D7 /* Segment in Frameworks */,
+				EAD949A1298A733100625D50 /* SegmentNielsenDTVR in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +87,12 @@
 		46EDC6E927C6B8D100B870D7 = {
 			isa = PBXGroup;
 			children = (
+				EAD9499D298A72EA00625D50 /* Packages */,
 				46EDC6F427C6B8D100B870D7 /* BasicExample */,
 				46EDC70527C6B8D200B870D7 /* BasicExampleTests */,
 				46EDC70F27C6B8D200B870D7 /* BasicExampleUITests */,
 				46EDC6F327C6B8D100B870D7 /* Products */,
+				EAD9499F298A733100625D50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				46EDC6F527C6B8D100B870D7 /* BasicExampleApp.swift */,
-				46EDC6F727C6B8D100B870D7 /* ContentView.swift */,
+				EAD949A4298A73D900625D50 /* SEGNielsenMainViewController.swift */,
+				EAD02A72298CDA8400229957 /* SEGNielsenWebViewController.swift */,
+				EAD949A8298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift */,
+				EAD949A6298A9CC000625D50 /* SEGVideoModel.swift */,
+				EAD02A74298D3DC000229957 /* Utility.swift */,
 				46EDC6F927C6B8D200B870D7 /* Assets.xcassets */,
 				46EDC6FB27C6B8D200B870D7 /* Preview Content */,
 			);
@@ -129,6 +146,21 @@
 			path = BasicExampleUITests;
 			sourceTree = "<group>";
 		};
+		EAD9499D298A72EA00625D50 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EAD9499E298A72EA00625D50 /* analytics-swift-integration-nielsen-dtvr */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EAD9499F298A733100625D50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +179,7 @@
 			name = BasicExample;
 			packageProductDependencies = (
 				46EDC72027C6B92C00B870D7 /* Segment */,
+				EAD949A0298A733100625D50 /* SegmentNielsenDTVR */,
 			);
 			productName = BasicExample;
 			productReference = 46EDC6F227C6B8D100B870D7 /* BasicExample.app */;
@@ -265,7 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EDC6F827C6B8D100B870D7 /* ContentView.swift in Sources */,
+				EAD02A75298D3DC000229957 /* Utility.swift in Sources */,
+				EAD02A73298CDA8400229957 /* SEGNielsenWebViewController.swift in Sources */,
+				EAD949A9298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift in Sources */,
+				EAD949A5298A73D900625D50 /* SEGNielsenMainViewController.swift in Sources */,
+				EAD949A7298A9CC000625D50 /* SEGVideoModel.swift in Sources */,
 				46EDC6F627C6B8D100B870D7 /* BasicExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +641,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46EDC71F27C6B92C00B870D7 /* XCRemoteSwiftPackageReference "analytics-swift" */;
 			productName = Segment;
+		};
+		EAD949A0298A733100625D50 /* SegmentNielsenDTVR */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SegmentNielsenDTVR;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
