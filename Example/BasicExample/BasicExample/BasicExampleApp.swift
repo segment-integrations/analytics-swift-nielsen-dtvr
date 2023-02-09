@@ -7,12 +7,13 @@
 
 import SwiftUI
 import Segment
+import SegmentNielsenDTVR
 
 @main
 struct BasicExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SEGNielsenMainView()
         }
     }
 }
@@ -22,7 +23,7 @@ extension Analytics {
         let analytics = Analytics(configuration: Configuration(writeKey: "<YOUR WRITE KEY>")
                     .flushAt(3)
                     .trackApplicationLifecycleEvents(true))
-        //analytics.add(plugin: <Destination>())
+        analytics.add(plugin: NielsenDTVRDestination())
         return analytics
     }
 }
