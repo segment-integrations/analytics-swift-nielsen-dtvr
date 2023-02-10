@@ -32,7 +32,7 @@ struct SEGNielsenMainView: View {
                     Text("Launch Player")
                 }.sheet(isPresented: $showSecondView){
                     // 5. Use the new SecondView initializer
-                    let videoModel = SEGVideoModel(videoId: "1234", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "Big Buck Bunny", videoDescription: "Test Video", loadType: "linear", channelName: "defaultChannel", duration: 596)
+                    let videoModel = SEGVideoModel(videoId: "1234", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", loadType: "linear", channelName: "defaultChannel")
                     SEGNielsenVideoPlayerView(videoModel: videoModel)
                 }
             }.onAppear {
