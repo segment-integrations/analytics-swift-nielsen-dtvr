@@ -42,9 +42,9 @@ public class NielsenDTVRDestination: DestinationPlugin {
     private var eventHandlers = [SEGNielsenEventHandler]()
     private var lastSeenID3Tag: String!
     private var defaultSettings: Settings!
-
+    
     public init() { }
-
+    
     public func update(settings: Settings, type: UpdateType) {
         // Skip if you have a singleton and don't want to keep updating via settings.
         guard type == .initial else { return }
@@ -56,7 +56,18 @@ public class NielsenDTVRDestination: DestinationPlugin {
         
         setupEventHandlers()
         
-        nielsenAppApi = NielsenAppApi(appInfo: tempSettings.appId, delegate: nil)
+        var appInformation:[String: String] = [
+            "appid": tempSettings.appId,
+            "appversion": __destination_version,
+            "sfcode": tempSettings.sfcode
+        ]
+        
+        if tempSettings.debug {
+            appInformation["nol_devDebug"] = "DEBUG"
+        }
+        
+        
+        nielsenAppApi = NielsenAppApi(appInfo: appInformation, delegate: nil)
         
     }
     
@@ -88,7 +99,7 @@ public class NielsenDTVRDestination: DestinationPlugin {
     public func userOptOutStatus(urlString: String) {
         nielsenAppApi.userOptOut(urlString)
     }
-
+    
 }
 
 extension NielsenDTVRDestination: VersionedPlugin {
@@ -99,6 +110,8 @@ extension NielsenDTVRDestination: VersionedPlugin {
 
 private struct NielsenDTVRSettings: Codable {
     let appId: String
+    let sfcode: String
+    let debug: Bool
 }
 
 //MARK:- Helper methods
@@ -115,7 +128,7 @@ private extension NielsenDTVRDestination {
                 value = properties?.dictionaryValue?["load_type"] as? String ?? ""
             }
             
-        
+            
             var adModel = ""
             if value == "linear" {
                 adModel = "1"
@@ -143,16 +156,16 @@ private extension NielsenDTVRDestination {
             }
             self.nielsenAppApi.play(self.channelInfoForPayload(event: eventPayload))
         }
-    
+        
         let stopHandler: SEGNielsenEventHandler = SEGNielsenEventHandler(events:
-            ["Video Playback Paused",
-            "Video Playback Interrupted",
-            "Video Playback Buffer Started",
-            "Video Playback Seek Started",
-            "Video Content Completed",
-            "Application Backgrounded",
-            "Video Playback Completed",
-            "Video Playback Exited"]) { nielsen, payload in
+                                                                            ["Video Playback Paused",
+                                                                             "Video Playback Interrupted",
+                                                                             "Video Playback Buffer Started",
+                                                                             "Video Playback Seek Started",
+                                                                             "Video Content Completed",
+                                                                             "Application Backgrounded",
+                                                                             "Video Playback Completed",
+                                                                             "Video Playback Exited"]) { nielsen, payload in
             self.nielsenAppApi?.stop()
         }
         
@@ -215,7 +228,7 @@ class SEGNielsenEventHandler: NSObject {
      @b payload Segment tracking payload.
      
      @return Instance of an event handler to map Segment events to Nielsen events.
-    */
+     */
     
     public init(
         events: [String]?,
