@@ -10,9 +10,6 @@ import Foundation
 struct SEGVideoModel {
     var videoId: String!
     var url: String!
-    var title: String!
-    var videoDescription: String!
     var loadType: String!
     var channelName: String!
-    var duration: Int!
 }

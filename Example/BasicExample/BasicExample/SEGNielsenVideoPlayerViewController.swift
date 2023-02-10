@@ -299,7 +299,7 @@ struct VideoPlayerControlsView : View {
 struct SEGNielsenVideoPlayerView_Previews: PreviewProvider {
     
     static var previews: some View {
-        SEGNielsenVideoPlayerView(videoModel: SEGVideoModel(videoId: "1234", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "Big Buck Bunny", videoDescription: "Test Video", loadType: "linear", channelName: "defaultChannel", duration: 596))
+        SEGNielsenVideoPlayerView(videoModel: SEGVideoModel(videoId: "1234", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", loadType: "linear", channelName: "defaultChannel"))
     }
     
     
@@ -340,13 +340,6 @@ extension SEGNielsenVideoPlayerView {
     }
     
     //Get properties to send
-    func trackingPropertiesForModel()->[String: Any] {
-        var baseProperties = trackingPropertiesForModelWithCurrentPlayProgress()
-        if player != nil {
-            baseProperties["position"] = getCurrentPlayerTimeSeconds()
-        }
-        return baseProperties
-    }
     
     func trackingPropertiesForModelWithCurrentPlayProgress()->[String: Any] {
         var trackingData = [String: Any]()
@@ -355,9 +348,6 @@ extension SEGNielsenVideoPlayerView {
                 "asset_id" : model.videoId ?? "",
                 "channel": model.channelName ?? "",
                 "load_type": model.loadType ?? "",
-                "title": model.title ?? "",
-                "description": model.videoDescription ?? "",
-                "total_length": model.duration ?? 0,
             ]
         }
         return trackingData
