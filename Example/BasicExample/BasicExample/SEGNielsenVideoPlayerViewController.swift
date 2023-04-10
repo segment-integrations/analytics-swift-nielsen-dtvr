@@ -101,9 +101,9 @@ class VideoPlayerUIView: UIView {
     private var durationObservation: NSKeyValueObservation?
     private var timeObservation: Any?
     private var statusObserver: NSKeyValueObservation?
-    private var videoPlayerProperties: [String: Any]
+    private var videoPlayerProperties: [String: Codable]
     
-    init(player: AVPlayer, videoPos: Binding<Double>, videoDuration: Binding<Double>, seeking: Binding<Bool>, videoPlayerProperties: [String: Any]) {
+    init(player: AVPlayer, videoPos: Binding<Double>, videoDuration: Binding<Double>, seeking: Binding<Bool>, videoPlayerProperties: [String: Codable]) {
         self.player = player
         self.videoDuration = videoDuration
         self.videoPos = videoPos
@@ -191,7 +191,7 @@ struct VideoPlayerView: UIViewRepresentable {
     @Binding private(set) var videoPos: Double
     @Binding private(set) var videoDuration: Double
     @Binding private(set) var seeking: Bool
-    var videoPlayerProperties: [String: Any]
+    var videoPlayerProperties: [String: Codable]
     
     let player: AVPlayer
     
@@ -226,7 +226,7 @@ struct VideoPlayerControlsView : View {
     
     let player: AVPlayer
     @State private var playerPaused = true
-    @State var videoPlayerProperties = [String: Any]()
+    @State var videoPlayerProperties = [String: Codable]()
     
     var body: some View {
         HStack {
@@ -341,8 +341,8 @@ extension SEGNielsenVideoPlayerView {
     
     //Get properties to send
     
-    func trackingPropertiesForModelWithCurrentPlayProgress()->[String: Any] {
-        var trackingData = [String: Any]()
+    func trackingPropertiesForModelWithCurrentPlayProgress()->[String: Codable] {
+        var trackingData = [String: Codable]()
         if model != nil {
             trackingData = [
                 "asset_id" : model.videoId ?? "",
