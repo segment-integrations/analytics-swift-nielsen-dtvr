@@ -29,6 +29,11 @@ import Foundation
 import Segment
 import NielsenAppApi
 
+@objc(SEGNielsenDTVRDestination)
+public class ObjCSegmentNielsenDTVR: NSObject, ObjCDestination, ObjCDestinationShim {
+    public func instance() -> DestinationPlugin { return NielsenDTVRDestination() }
+}
+
 public class NielsenDTVRDestination: DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
