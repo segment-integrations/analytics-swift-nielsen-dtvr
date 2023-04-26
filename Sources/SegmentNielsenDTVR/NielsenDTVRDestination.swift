@@ -30,8 +30,8 @@ import Segment
 import NielsenAppApi
 
 @objc(SEGNielsenDTVRDestination)
-public class ObjCSegmentNielsenDTVR: NSObject, ObjCDestination, ObjCDestinationShim {
-    public func instance() -> DestinationPlugin { return NielsenDTVRDestination() }
+public class ObjCSegmentNielsenDTVR: NSObject, ObjCPlugin, ObjCPluginShim {
+    public func instance() -> EventPlugin { return NielsenDTVRDestination() }
 }
 
 public class NielsenDTVRDestination: DestinationPlugin {
