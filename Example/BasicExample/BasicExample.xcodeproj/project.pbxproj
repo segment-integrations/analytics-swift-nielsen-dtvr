@@ -51,7 +51,7 @@
 		46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EAD02A72298CDA8400229957 /* SEGNielsenWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGNielsenWebViewController.swift; sourceTree = "<group>"; };
 		EAD02A74298D3DC000229957 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		EAD9499E298A72EA00625D50 /* analytics-swift-integration-nielsen-dtvr */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "analytics-swift-integration-nielsen-dtvr"; path = ../..; sourceTree = "<group>"; };
+		EAD9499E298A72EA00625D50 /* analytics-swift-nielsen-dtvr */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "analytics-swift-nielsen-dtvr"; path = ../..; sourceTree = "<group>"; };
 		EAD949A4298A73D900625D50 /* SEGNielsenMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEGNielsenMainViewController.swift; sourceTree = "<group>"; };
 		EAD949A6298A9CC000625D50 /* SEGVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGVideoModel.swift; sourceTree = "<group>"; };
 		EAD949A8298A9D3900625D50 /* SEGNielsenVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEGNielsenVideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		EAD9499D298A72EA00625D50 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				EAD9499E298A72EA00625D50 /* analytics-swift-integration-nielsen-dtvr */,
+				EAD9499E298A72EA00625D50 /* analytics-swift-nielsen-dtvr */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
