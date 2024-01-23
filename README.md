@@ -1,15 +1,19 @@
 # Analytics-Swift Nielsen-DTVR
 
-Add Nielsen-DTVR session tracking support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
+Add `Nielsen-DTVR` Device Mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
-The Nielsen-DTVR destination in the Segment dashboard is in private beta. You will need to talk to your Segment customer service representative and have a Nielsen representative before getting started.
+## Adding the dependency
+
+***Note:*** the `Nielsen-DTVR` library itself will be installed as an additional dependency.
 
 ## Adding the dependency
 
 ### via Xcode
-In the Xcode `File` menu, click `Add Packages`.  You'll see a dialog where you can search for Swift packages.  In the search field, enter the URL to this repo.
+In the Xcode `File` menu, click `Add Packages`.  You'll see a dialog where you can search for Swift packages.  In the search field, enter the URL for this repo:
 
+```
 https://github.com/segment-integrations/analytics-swift-nielsen-dtvr
+```
 
 You'll then have the option to pin to a version, or specific branch, as well as which project in your workspace to add it to.  Once you've made your selections, click the `Add Package` button.  
 
@@ -43,7 +47,7 @@ let analytics = Analytics(configuration: Configuration(writeKey: "<YOUR WRITE KE
                     .trackApplicationLifecycleEvents(true))
 analytics.add(plugin: NielsenDTVRDestination())
 ```
-Your events will now be given Nielsen-DTVR session data and start flowing to Nielsen-DTVR via Cloud Mode.
+Your events will now be given Nielsen-DTVR session data and start flowing to Nielsen-DTVR via Device Mode.
 
 
 ## Support
