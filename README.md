@@ -1,6 +1,6 @@
 # Analytics-Swift Nielsen-DTVR
 
-Add `Nielsen-DTVR` Device Mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
+Add `Nielsen-DTVR` Device Mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift).
 
 ## Adding the dependency
 
